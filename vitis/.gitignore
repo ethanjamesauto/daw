@@ -3,3 +3,5 @@ RemoteSystemsTempFiles
 .analytics
 IDE.log
 Zybo-Z7-20-DMA/Debug
+system_wrapper/logs
+system_wrapper/.log
