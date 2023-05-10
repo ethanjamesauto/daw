@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Aug  1 16:01:54 2022
-// Host        : sim-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+// Date        : Wed May 10 15:45:15 2023
+// Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.v
+//               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.v
 // Design      : system_axi_gpio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2022.1" *) 
+(* CHECK_LICENSE_TYPE = "system_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
 module system_axi_gpio_0_0
    (s_axi_aclk,
@@ -94,8 +94,8 @@ module system_axi_gpio_0_0
   (* C_ALL_INPUTS_2 = "0" *) 
   (* C_ALL_OUTPUTS = "0" *) 
   (* C_ALL_OUTPUTS_2 = "0" *) 
-  (* C_DOUT_DEFAULT = "0" *) 
-  (* C_DOUT_DEFAULT_2 = "0" *) 
+  (* C_DOUT_DEFAULT = "32'b00000000000000000000000000000000" *) 
+  (* C_DOUT_DEFAULT_2 = "32'b00000000000000000000000000000000" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_GPIO2_WIDTH = "32" *) 
   (* C_GPIO_WIDTH = "4" *) 
@@ -103,8 +103,8 @@ module system_axi_gpio_0_0
   (* C_IS_DUAL = "0" *) 
   (* C_S_AXI_ADDR_WIDTH = "9" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_TRI_DEFAULT = "-1" *) 
-  (* C_TRI_DEFAULT_2 = "-1" *) 
+  (* C_TRI_DEFAULT = "32'b11111111111111111111111111111111" *) 
+  (* C_TRI_DEFAULT_2 = "32'b11111111111111111111111111111111" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
   (* ip_group = "LOGICORE" *) 
   system_axi_gpio_0_0_axi_gpio U0
@@ -1127,10 +1127,10 @@ module system_axi_gpio_0_0_address_decoder
 endmodule
 
 (* C_ALL_INPUTS = "1" *) (* C_ALL_INPUTS_2 = "0" *) (* C_ALL_OUTPUTS = "0" *) 
-(* C_ALL_OUTPUTS_2 = "0" *) (* C_DOUT_DEFAULT = "0" *) (* C_DOUT_DEFAULT_2 = "0" *) 
+(* C_ALL_OUTPUTS_2 = "0" *) (* C_DOUT_DEFAULT = "32'b00000000000000000000000000000000" *) (* C_DOUT_DEFAULT_2 = "32'b00000000000000000000000000000000" *) 
 (* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "4" *) 
 (* C_INTERRUPT_PRESENT = "1" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
-(* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
+(* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "32'b11111111111111111111111111111111" *) (* C_TRI_DEFAULT_2 = "32'b11111111111111111111111111111111" *) 
 (* ORIG_REF_NAME = "axi_gpio" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
 module system_axi_gpio_0_0_axi_gpio
    (s_axi_aclk,
@@ -2809,13 +2809,17 @@ module system_axi_gpio_0_0_slave_attachment
        (.I0(s_axi_awvalid),
         .I1(s_axi_wvalid),
         .O(p_5_in));
-  FDRE \state_reg[0] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \state_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\state[0]_i_1_n_0 ),
         .Q(\state_reg_n_0_[0] ),
         .R(SR));
-  FDRE \state_reg[1] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\state[1]_i_1_n_0 ),

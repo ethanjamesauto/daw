@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Aug  1 16:02:14 2022
-// Host        : sim-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+// Date        : Wed May 10 15:49:18 2023
+// Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_sim_netlist.v
+//               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_sim_netlist.v
 // Design      : system_auto_us_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_auto_us_1,axi_dwidth_converter_v2_1_26_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_dwidth_converter_v2_1_26_top,Vivado 2022.1" *) 
+(* CHECK_LICENSE_TYPE = "system_auto_us_1,axi_dwidth_converter_v2_1_27_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_dwidth_converter_v2_1_27_top,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
 module system_auto_us_1
    (s_axi_aclk,
@@ -181,7 +181,7 @@ module system_auto_us_1
   (* P_AXILITE = "2" *) 
   (* P_CONVERSION = "2" *) 
   (* P_MAX_SPLIT_BEATS = "16" *) 
-  system_auto_us_1_axi_dwidth_converter_v2_1_26_top inst
+  system_auto_us_1_axi_dwidth_converter_v2_1_27_top inst
        (.m_axi_aclk(1'b0),
         .m_axi_araddr(NLW_inst_m_axi_araddr_UNCONNECTED[31:0]),
         .m_axi_arburst(NLW_inst_m_axi_arburst_UNCONNECTED[1:0]),
@@ -262,8 +262,8 @@ module system_auto_us_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_26_a_upsizer" *) 
-module system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_27_a_upsizer" *) 
+module system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer
    (\USE_WRITE.wr_cmd_valid ,
     s_axi_wlast_0,
     p_89_in,
@@ -465,8 +465,8 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_26_axi_upsizer" *) 
-module system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_27_axi_upsizer" *) 
+module system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer
    (m_axi_awlen,
     Q,
     \USE_REGISTER.M_AXI_WVALID_q_reg ,
@@ -595,7 +595,7 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer
   wire wrap_buffer_available;
   wire wstrb_wrap_buffer_q;
 
-  system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer \USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst 
+  system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer \USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst 
        (.D(pre_next_word),
         .E(pop_si_data),
         .Q({\USE_WRITE.wr_cmd_fix ,\USE_WRITE.wr_cmd_packed_wrap ,\USE_WRITE.wr_cmd_first_word ,\USE_WRITE.wr_cmd_offset ,\USE_WRITE.write_addr_inst_n_8 ,\USE_WRITE.write_addr_inst_n_9 ,\USE_WRITE.write_addr_inst_n_10 ,\USE_WRITE.write_addr_inst_n_11 ,\USE_WRITE.write_addr_inst_n_12 ,\USE_WRITE.write_addr_inst_n_13 ,\USE_WRITE.write_addr_inst_n_14 ,\USE_WRITE.write_addr_inst_n_15 }),
@@ -639,7 +639,7 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer
         .sel_first_word__0(sel_first_word__0),
         .wrap_buffer_available(wrap_buffer_available),
         .wrap_buffer_available_reg_0(\USE_WRITE.write_addr_inst_n_37 ));
-  system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer \USE_WRITE.write_addr_inst 
+  system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer \USE_WRITE.write_addr_inst 
        (.D(pre_next_word),
         .E(sr_awvalid),
         .Q({\USE_WRITE.wr_cmd_fix ,\USE_WRITE.wr_cmd_packed_wrap ,\USE_WRITE.wr_cmd_first_word ,\USE_WRITE.wr_cmd_offset ,\USE_WRITE.write_addr_inst_n_8 ,\USE_WRITE.write_addr_inst_n_9 ,\USE_WRITE.write_addr_inst_n_10 ,\USE_WRITE.write_addr_inst_n_11 ,\USE_WRITE.write_addr_inst_n_12 ,\USE_WRITE.write_addr_inst_n_13 ,\USE_WRITE.write_addr_inst_n_14 ,\USE_WRITE.write_addr_inst_n_15 }),
@@ -686,7 +686,7 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer
         .wrap_buffer_available_reg_4(\WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[2].USE_RTL_DATA.wdata_wrap_buffer_q_reg0 ),
         .wrap_buffer_available_reg_5(\WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[1].USE_RTL_DATA.wdata_wrap_buffer_q_reg0 ),
         .wrap_buffer_available_reg_6(\WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[0].USE_RTL_DATA.wdata_wrap_buffer_q_reg0 ));
-  system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice si_register_slice_inst
+  system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice si_register_slice_inst
        (.D(D),
         .E(sr_awvalid),
         .Q(Q),
@@ -711,9 +711,9 @@ endmodule
 (* C_RATIO = "0" *) (* C_RATIO_LOG = "0" *) (* C_SUPPORTS_ID = "0" *) 
 (* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_S_AXI_BYTES_LOG = "2" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_26_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_27_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
 (* P_AXILITE = "2" *) (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
-module system_auto_us_1_axi_dwidth_converter_v2_1_26_top
+module system_auto_us_1_axi_dwidth_converter_v2_1_27_top
    (s_axi_aclk,
     s_axi_aresetn,
     s_axi_awid,
@@ -1019,7 +1019,7 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_top
   assign s_axi_rvalid = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer \gen_upsizer.gen_full_upsizer.axi_upsizer_inst 
+  system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer \gen_upsizer.gen_full_upsizer.axi_upsizer_inst 
        (.D({s_axi_awregion,s_axi_awqos,s_axi_awlock,s_axi_awlen,s_axi_awcache,s_axi_awburst,s_axi_awsize,s_axi_awprot,s_axi_awaddr}),
         .Q({m_axi_awregion,m_axi_awqos,m_axi_awlock,m_axi_awcache,m_axi_awprot,m_axi_awaddr[31:6]}),
         .\USE_REGISTER.M_AXI_WVALID_q_reg (m_axi_wvalid),
@@ -1044,8 +1044,8 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_top
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_26_w_upsizer" *) 
-module system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_27_w_upsizer" *) 
+module system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer
    (\USE_RTL_CURR_WORD.first_word_q ,
     s_axi_aresetn,
     \USE_RTL_LENGTH.length_counter_q_reg[1]_0 ,
@@ -3339,8 +3339,8 @@ module system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer
         .R(s_axi_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_26_axi_register_slice" *) 
-module system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_27_axi_register_slice" *) 
+module system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice
    (E,
     s_axi_awready,
     in,
@@ -3388,7 +3388,7 @@ module system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice
   wire s_axi_awvalid;
   wire s_ready_i_reg;
 
-  system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice \aw.aw_pipe 
+  system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice \aw.aw_pipe 
        (.D(D),
         .E(E),
         .Q(Q),
@@ -3406,8 +3406,8 @@ module system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice
         .s_ready_i_reg_0(s_ready_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_26_axic_register_slice" *) 
-module system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_27_axic_register_slice" *) 
+module system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice
    (E,
     s_axi_awready,
     in,

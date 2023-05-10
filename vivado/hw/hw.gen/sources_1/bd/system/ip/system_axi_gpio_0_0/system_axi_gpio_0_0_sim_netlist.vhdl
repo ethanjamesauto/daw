@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Aug  1 16:01:54 2022
--- Host        : sim-ro running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+-- Date        : Wed May 10 15:45:15 2023
+-- Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.vhdl
+--               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : system_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2424,7 +2424,10 @@ start2_reg: unisim.vcomponents.FDRE
       O => p_5_in
     );
 \state_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_aclk,
       CE => '1',
       D => \state[0]_i_1_n_0\,
@@ -2432,7 +2435,10 @@ start2_reg: unisim.vcomponents.FDRE
       R => \^sr\(0)
     );
 \state_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_aclk,
       CE => '1',
       D => \state[1]_i_1_n_0\,
@@ -2600,10 +2606,10 @@ entity system_axi_gpio_0_0_axi_gpio is
   attribute C_ALL_OUTPUTS of system_axi_gpio_0_0_axi_gpio : entity is 0;
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of system_axi_gpio_0_0_axi_gpio : entity is 0;
-  attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of system_axi_gpio_0_0_axi_gpio : entity is 0;
-  attribute C_DOUT_DEFAULT_2 : integer;
-  attribute C_DOUT_DEFAULT_2 of system_axi_gpio_0_0_axi_gpio : entity is 0;
+  attribute C_DOUT_DEFAULT : string;
+  attribute C_DOUT_DEFAULT of system_axi_gpio_0_0_axi_gpio : entity is "32'b00000000000000000000000000000000";
+  attribute C_DOUT_DEFAULT_2 : string;
+  attribute C_DOUT_DEFAULT_2 of system_axi_gpio_0_0_axi_gpio : entity is "32'b00000000000000000000000000000000";
   attribute C_FAMILY : string;
   attribute C_FAMILY of system_axi_gpio_0_0_axi_gpio : entity is "zynq";
   attribute C_GPIO2_WIDTH : integer;
@@ -2618,10 +2624,10 @@ entity system_axi_gpio_0_0_axi_gpio is
   attribute C_S_AXI_ADDR_WIDTH of system_axi_gpio_0_0_axi_gpio : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of system_axi_gpio_0_0_axi_gpio : entity is 32;
-  attribute C_TRI_DEFAULT : integer;
-  attribute C_TRI_DEFAULT of system_axi_gpio_0_0_axi_gpio : entity is -1;
-  attribute C_TRI_DEFAULT_2 : integer;
-  attribute C_TRI_DEFAULT_2 of system_axi_gpio_0_0_axi_gpio : entity is -1;
+  attribute C_TRI_DEFAULT : string;
+  attribute C_TRI_DEFAULT of system_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
+  attribute C_TRI_DEFAULT_2 : string;
+  attribute C_TRI_DEFAULT_2 of system_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
@@ -3066,7 +3072,7 @@ entity system_axi_gpio_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_axi_gpio_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_axi_gpio_0_0 : entity is "axi_gpio,Vivado 2022.1";
+  attribute x_core_info of system_axi_gpio_0_0 : entity is "axi_gpio,Vivado 2022.2";
 end system_axi_gpio_0_0;
 
 architecture STRUCTURE of system_axi_gpio_0_0 is
@@ -3085,10 +3091,10 @@ architecture STRUCTURE of system_axi_gpio_0_0 is
   attribute C_ALL_OUTPUTS of U0 : label is 0;
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of U0 : label is 0;
-  attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of U0 : label is 0;
-  attribute C_DOUT_DEFAULT_2 : integer;
-  attribute C_DOUT_DEFAULT_2 of U0 : label is 0;
+  attribute C_DOUT_DEFAULT : string;
+  attribute C_DOUT_DEFAULT of U0 : label is "32'b00000000000000000000000000000000";
+  attribute C_DOUT_DEFAULT_2 : string;
+  attribute C_DOUT_DEFAULT_2 of U0 : label is "32'b00000000000000000000000000000000";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "zynq";
   attribute C_GPIO2_WIDTH : integer;
@@ -3103,10 +3109,10 @@ architecture STRUCTURE of system_axi_gpio_0_0 is
   attribute C_S_AXI_ADDR_WIDTH of U0 : label is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of U0 : label is 32;
-  attribute C_TRI_DEFAULT : integer;
-  attribute C_TRI_DEFAULT of U0 : label is -1;
-  attribute C_TRI_DEFAULT_2 : integer;
-  attribute C_TRI_DEFAULT_2 of U0 : label is -1;
+  attribute C_TRI_DEFAULT : string;
+  attribute C_TRI_DEFAULT of U0 : label is "32'b11111111111111111111111111111111";
+  attribute C_TRI_DEFAULT_2 : string;
+  attribute C_TRI_DEFAULT_2 of U0 : label is "32'b11111111111111111111111111111111";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
   attribute ip_group : string;
   attribute ip_group of U0 : label is "LOGICORE";

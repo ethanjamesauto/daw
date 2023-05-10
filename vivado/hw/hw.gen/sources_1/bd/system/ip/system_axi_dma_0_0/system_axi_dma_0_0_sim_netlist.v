@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Aug  1 16:02:46 2022
-// Host        : sim-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+// Date        : Wed May 10 15:48:16 2023
+// Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_sim_netlist.v
+//               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_sim_netlist.v
 // Design      : system_axi_dma_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_axi_dma_0_0,axi_dma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_dma,Vivado 2022.1" *) 
+(* CHECK_LICENSE_TYPE = "system_axi_dma_0_0,axi_dma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_dma,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
 module system_axi_dma_0_0
    (s_axi_lite_aclk,
@@ -9329,14 +9329,14 @@ module system_axi_dma_0_0_axi_datamover_indet_btt
     sig_m_valid_out_reg,
     sig_ibtt2wdc_tlast,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ,
     \sig_burst_dbeat_cntr_reg[3]_0 ,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     sig_m_valid_out_reg_0,
     D,
     O,
     CO,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ,
     DI,
     \sig_data_reg_out_reg[34] ,
     sig_m_valid_out_reg_1,
@@ -9372,14 +9372,14 @@ module system_axi_dma_0_0_axi_datamover_indet_btt
   output sig_m_valid_out_reg;
   output sig_ibtt2wdc_tlast;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   output \sig_burst_dbeat_cntr_reg[3]_0 ;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   output [0:0]sig_m_valid_out_reg_0;
   output [4:0]D;
   output [3:0]O;
   output [0:0]CO;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
   output [2:0]DI;
   output [34:0]\sig_data_reg_out_reg[34] ;
   output sig_m_valid_out_reg_1;
@@ -9430,8 +9430,8 @@ module system_axi_dma_0_0_axi_datamover_indet_btt
   wire [8:0]dout;
   wire empty;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
+  wire \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   wire m_axi_s2mm_aclk;
   wire out;
   wire [3:0]p_0_in;
@@ -9524,9 +9524,9 @@ module system_axi_dma_0_0_axi_datamover_indet_btt
         .empty(empty),
         .full(sig_data_fifo_full),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] (D),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] (D),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .rd_en(rd_en),
         .\sig_burst_dbeat_cntr_reg[3] (\sig_burst_dbeat_cntr_reg[3]_0 ),
@@ -16764,8 +16764,8 @@ module system_axi_dma_0_0_axi_datamover_s2mm_full_wrap
         .dout({sig_sf2pcc_packet_eop,sig_sf2pcc_cmd_cmplt,sig_sf2pcc_xfer_bytes}),
         .empty(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_9 ),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_29 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_30 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_31 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_32 }),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_29 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_30 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_31 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_32 }),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(\ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/p_0_in2_in ),
         .rd_en(sig_pop_xd_fifo),
@@ -19047,17 +19047,17 @@ module system_axi_dma_0_0_axi_datamover_sfifo_autord__parameterized0
    (dout,
     empty,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ,
     sig_clr_dbeat_cntr0_out,
     E,
     \sig_burst_dbeat_cntr_reg[3] ,
     D,
     SR,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ,
     O,
     CO,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     sig_clr_dbc_reg,
@@ -19081,17 +19081,17 @@ module system_axi_dma_0_0_axi_datamover_sfifo_autord__parameterized0
   output [8:0]dout;
   output empty;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   output sig_clr_dbeat_cntr0_out;
   output [0:0]E;
   output \sig_burst_dbeat_cntr_reg[3] ;
   output [5:0]D;
   output [0:0]SR;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
-  output [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
+  output [4:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ;
   output [3:0]O;
   output [0:0]CO;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_clr_dbc_reg;
@@ -19125,9 +19125,9 @@ module system_axi_dma_0_0_axi_datamover_sfifo_autord__parameterized0
   wire empty;
   wire full;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
-  wire [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  wire [4:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
+  wire \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   wire m_axi_s2mm_aclk;
   wire rd_en;
   wire \sig_burst_dbeat_cntr_reg[3] ;
@@ -19161,9 +19161,9 @@ module system_axi_dma_0_0_axi_datamover_sfifo_autord__parameterized0
         .full(full),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (E),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] (\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ),
+        .\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .rd_en(rd_en),
         .\sig_burst_dbeat_cntr_reg[3] (\sig_burst_dbeat_cntr_reg[3] ),
@@ -33667,14 +33667,18 @@ module system_axi_dma_0_0_axi_dma_smple_sm
         .I5(s2mm_dmacr),
         .O(\FSM_sequential_smpl_cs[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "execute_xfer:01,wait_status:10,idle:00" *) 
-  FDRE \FSM_sequential_smpl_cs_reg[0] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_smpl_cs_reg[0] 
        (.C(s_axi_lite_aclk),
         .CE(1'b1),
         .D(\FSM_sequential_smpl_cs[0]_i_1__0_n_0 ),
         .Q(\FSM_sequential_smpl_cs_reg[0]_0 ),
         .R(\GEN_CMD_BTT_LESS_23.cmnd_data_reg[0]_0 ));
   (* FSM_ENCODED_STATES = "execute_xfer:01,wait_status:10,idle:00" *) 
-  FDRE \FSM_sequential_smpl_cs_reg[1] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_smpl_cs_reg[1] 
        (.C(s_axi_lite_aclk),
         .CE(1'b1),
         .D(\FSM_sequential_smpl_cs[1]_i_2__0_n_0 ),
@@ -34225,14 +34229,18 @@ module system_axi_dma_0_0_axi_dma_smple_sm_29
         .I5(mm2s_dmacr),
         .O(\FSM_sequential_smpl_cs[1]_i_3__0_n_0 ));
   (* FSM_ENCODED_STATES = "execute_xfer:01,wait_status:10,idle:00" *) 
-  FDRE \FSM_sequential_smpl_cs_reg[0] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_smpl_cs_reg[0] 
        (.C(s_axi_lite_aclk),
         .CE(1'b1),
         .D(\FSM_sequential_smpl_cs[0]_i_1_n_0 ),
         .Q(\FSM_sequential_smpl_cs_reg[0]_0 ),
         .R(\GEN_CMD_BTT_LESS_23.cmnd_data_reg[0]_0 ));
   (* FSM_ENCODED_STATES = "execute_xfer:01,wait_status:10,idle:00" *) 
-  FDRE \FSM_sequential_smpl_cs_reg[1] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_smpl_cs_reg[1] 
        (.C(s_axi_lite_aclk),
         .CE(1'b1),
         .D(\FSM_sequential_smpl_cs[1]_i_2_n_0 ),
@@ -41950,17 +41958,17 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
    (dout,
     empty,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ,
     sig_clr_dbeat_cntr0_out,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     \sig_burst_dbeat_cntr_reg[3] ,
     D,
     SR,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ,
     O,
     CO,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     sig_clr_dbc_reg,
@@ -41984,17 +41992,17 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
   output [8:0]dout;
   output empty;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   output sig_clr_dbeat_cntr0_out;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   output \sig_burst_dbeat_cntr_reg[3] ;
   output [5:0]D;
   output [0:0]SR;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  output [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
+  output [4:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ;
   output [3:0]O;
   output [0:0]CO;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_clr_dbc_reg;
@@ -42028,9 +42036,9 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
   wire full;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  wire [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  wire [4:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ;
+  wire \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ;
   wire m_axi_s2mm_aclk;
   wire rd_en;
   wire \sig_burst_dbeat_cntr_reg[3] ;
@@ -42103,7 +42111,7 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
        (.I0(dout[7]),
         .I1(dout[8]),
         .I2(sig_child_qual_first_of_2),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] ));
   LUT5 #(
     .INIT(32'h80000000)) 
     \sig_burst_dbeat_cntr[3]_i_3 
@@ -42312,7 +42320,7 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
         .CO({CO,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,\sig_child_addr_cntr_lsh[4]_i_2_n_0 ,\sig_child_addr_cntr_lsh[4]_i_3_n_0 ,\sig_child_addr_cntr_lsh[4]_i_4_n_0 }),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ),
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] ),
         .S(\sig_child_addr_cntr_lsh_reg[7] ));
   LUT6 #(
     .INIT(64'hFFFFFFFF80000000)) 
@@ -42347,7 +42355,7 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
         .I2(sig_child_addr_cntr_lsh_reg[0]),
         .I3(dout[0]),
         .I4(dout[2]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [0]));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] [0]));
   LUT6 #(
     .INIT(64'h57FFFFFEA8000001)) 
     \sig_xfer_len_reg[1]_i_1 
@@ -42357,14 +42365,14 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
         .I3(dout[1]),
         .I4(sig_child_addr_cntr_lsh_reg[1]),
         .I5(dout[3]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [1]));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] [1]));
   LUT3 #(
     .INIT(8'h96)) 
     \sig_xfer_len_reg[2]_i_1 
        (.I0(\sig_xfer_len_reg[4]_i_2_n_0 ),
         .I1(\sig_xfer_len_reg[4]_i_3_n_0 ),
         .I2(dout[4]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [2]));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] [2]));
   (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT4 #(
     .INIT(16'hBD42)) 
@@ -42373,7 +42381,7 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
         .I1(dout[4]),
         .I2(\sig_xfer_len_reg[4]_i_3_n_0 ),
         .I3(dout[5]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [3]));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] [3]));
   (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT5 #(
     .INIT(32'hBFFD4002)) 
@@ -42383,7 +42391,7 @@ module system_axi_dma_0_0_sync_fifo_fg__parameterized0
         .I2(\sig_xfer_len_reg[4]_i_3_n_0 ),
         .I3(dout[4]),
         .I4(dout[6]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [4]));
+        .O(\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] [4]));
   LUT6 #(
     .INIT(64'h0280800000000001)) 
     \sig_xfer_len_reg[4]_i_2 
@@ -46507,7 +46515,7 @@ module system_axi_dma_0_0_xpm_fifo_reg_bit
 
   FDRE #(
     .INIT(1'b0)) 
-    d_out_reg
+    d_out_int_reg
        (.C(wr_clk),
         .CE(1'b1),
         .D(Q),
@@ -46543,7 +46551,7 @@ module system_axi_dma_0_0_xpm_fifo_reg_bit_25
 
   FDRE #(
     .INIT(1'b0)) 
-    d_out_reg
+    d_out_int_reg
        (.C(wr_clk),
         .CE(1'b1),
         .D(Q),
@@ -46579,7 +46587,7 @@ module system_axi_dma_0_0_xpm_fifo_reg_bit_8
 
   FDRE #(
     .INIT(1'b0)) 
-    d_out_reg
+    d_out_int_reg
        (.C(wr_clk),
         .CE(1'b1),
         .D(Q),
@@ -47907,16 +47915,8 @@ module system_axi_dma_0_0_xpm_memory_base__parameterized0
   wire [8:0]dina;
   wire [8:0]doutb;
   wire enb;
-  wire [8:0]\gen_rd_b.doutb_reg0 ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[4] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[5] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[6] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[7] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[8] ;
+  wire [8:0]\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg ;
+  wire [8:0]\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 ;
   wire regceb;
   wire rstb;
   wire sleep;
@@ -47941,159 +47941,159 @@ module system_axi_dma_0_0_xpm_memory_base__parameterized0
   assign sbiterrb = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  (* dram_emb_xdc = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[0] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [0]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[1] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [1]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[2] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [2]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[3] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [3]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[4] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [4]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[5] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [5]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[6] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [6]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[7] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [7]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[8] 
-       (.C(clka),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [8]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][0] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [0]),
         .Q(doutb[0]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [1]),
         .Q(doutb[1]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][2] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [2]),
         .Q(doutb[2]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][3] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [3]),
         .Q(doutb[3]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][4] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][4] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [4]),
         .Q(doutb[4]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [5]),
         .Q(doutb[5]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [6]),
         .Q(doutb[6]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [7]),
         .Q(doutb[7]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][8] 
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][8] 
        (.C(clka),
         .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [8]),
         .Q(doutb[8]),
         .R(rstb));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[0] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [0]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [0]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [1]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [1]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[2] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [2]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [2]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[3] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [3]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [3]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[4] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [4]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [4]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[5] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [5]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [5]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[6] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [6]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [6]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[7] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [7]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [7]),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[8] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [8]),
+        .Q(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg [8]),
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "" *) 
   (* RTL_RAM_BITS = "144" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5" *) 
@@ -48117,9 +48117,9 @@ module system_axi_dma_0_0_xpm_memory_base__parameterized0
         .DIB(dina[3:2]),
         .DIC(dina[5:4]),
         .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [1:0]),
-        .DOB(\gen_rd_b.doutb_reg0 [3:2]),
-        .DOC(\gen_rd_b.doutb_reg0 [5:4]),
+        .DOA(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [1:0]),
+        .DOB(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [3:2]),
+        .DOC(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [5:4]),
         .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(wea));
@@ -48146,8 +48146,8 @@ module system_axi_dma_0_0_xpm_memory_base__parameterized0
         .DIB({1'b0,dina[8]}),
         .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [7:6]),
-        .DOB({\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED [1],\gen_rd_b.doutb_reg0 [8]}),
+        .DOA(\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [7:6]),
+        .DOB({\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED [1],\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0 [8]}),
         .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOC_UNCONNECTED [1:0]),
         .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),

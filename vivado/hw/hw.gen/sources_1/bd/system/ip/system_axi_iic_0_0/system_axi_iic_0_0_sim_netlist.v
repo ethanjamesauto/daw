@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Aug  1 16:02:11 2022
-// Host        : sim-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+// Date        : Wed May 10 15:46:08 2023
+// Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_sim_netlist.v
+//               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_sim_netlist.v
 // Design      : system_axi_iic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_axi_iic_0_0,axi_iic,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_iic,Vivado 2022.1" *) 
+(* CHECK_LICENSE_TYPE = "system_axi_iic_0_0,axi_iic,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_iic,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
 module system_axi_iic_0_0
    (s_axi_aclk,
@@ -5003,21 +5003,27 @@ module system_axi_iic_0_0_iic_control
         .I1(sda_sample),
         .O(\FSM_sequential_state[2]_i_9_n_0 ));
   (* FSM_ENCODED_STATES = "ack_header:110,wait_ack:001,header:101,ack_data:011,rcv_data:100,xmit_data:010,idle:000" *) 
-  FDRE \FSM_sequential_state_reg[0] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_state_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(BITCNT_n_4),
         .Q(state__0[0]),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "ack_header:110,wait_ack:001,header:101,ack_data:011,rcv_data:100,xmit_data:010,idle:000" *) 
-  FDRE \FSM_sequential_state_reg[1] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(BITCNT_n_3),
         .Q(state__0[1]),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "ack_header:110,wait_ack:001,header:101,ack_data:011,rcv_data:100,xmit_data:010,idle:000" *) 
-  FDRE \FSM_sequential_state_reg[2] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_state_reg[2] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(BITCNT_n_2),
@@ -9838,13 +9844,17 @@ module system_axi_iic_0_0_slave_attachment
        (.I0(s_axi_wvalid),
         .I1(s_axi_awvalid),
         .O(\state[1]_i_2_n_0 ));
-  FDRE \state_reg[0] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \state_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\state[0]_i_1_n_0 ),
         .Q(\state_reg_n_0_[0] ),
         .R(rst));
-  FDRE \state_reg[1] 
+  FDRE #(
+    .INIT(1'b0)) 
+    \state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\state[1]_i_1_n_0 ),

@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Aug  1 16:02:14 2022
--- Host        : sim-ro running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+-- Date        : Wed May 10 15:49:18 2023
+-- Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_sim_netlist.vhdl
+--               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_sim_netlist.vhdl
 -- Design      : system_auto_us_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer is
+entity system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer is
   port (
     \USE_RTL_CURR_WORD.first_word_q\ : out STD_LOGIC;
     s_axi_aresetn : out STD_LOGIC;
@@ -61,10 +61,10 @@ entity system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer is
     \USE_RTL_CURR_WORD.current_word_q_reg[2]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer : entity is "axi_dwidth_converter_v2_1_26_w_upsizer";
-end system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer;
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer : entity is "axi_dwidth_converter_v2_1_27_w_upsizer";
+end system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer;
 
-architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer is
+architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer is
   signal \USE_REGISTER.M_AXI_WLAST_q_i_1_n_0\ : STD_LOGIC;
   signal \USE_REGISTER.M_AXI_WVALID_q_i_13_n_0\ : STD_LOGIC;
   signal \^use_register.m_axi_wvalid_q_reg_0\ : STD_LOGIC;
@@ -2910,7 +2910,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice is
+entity system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awready : out STD_LOGIC;
@@ -2929,10 +2929,10 @@ entity system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice is
     D : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice : entity is "axi_register_slice_v2_1_26_axic_register_slice";
-end system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice;
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice : entity is "axi_register_slice_v2_1_27_axic_register_slice";
+end system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice;
 
-architecture STRUCTURE of system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice is
+architecture STRUCTURE of system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 41 downto 0 );
   signal \USE_RTL_FIFO.data_srl_reg[31][22]_srl32_i_2_n_0\ : STD_LOGIC;
@@ -6074,7 +6074,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer is
+entity system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer is
   port (
     \USE_WRITE.wr_cmd_valid\ : out STD_LOGIC;
     s_axi_wlast_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6124,10 +6124,10 @@ entity system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer is
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer : entity is "axi_dwidth_converter_v2_1_26_a_upsizer";
-end system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer;
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer : entity is "axi_dwidth_converter_v2_1_27_a_upsizer";
+end system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer;
 
-architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer is
+architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer is
   signal cmd_push_block : STD_LOGIC;
   signal cmd_push_block0 : STD_LOGIC;
 begin
@@ -6198,7 +6198,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice is
+entity system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awready : out STD_LOGIC;
@@ -6217,12 +6217,12 @@ entity system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice is
     D : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice : entity is "axi_register_slice_v2_1_26_axi_register_slice";
-end system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice;
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice : entity is "axi_register_slice_v2_1_27_axi_register_slice";
+end system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice;
 
-architecture STRUCTURE of system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice is
+architecture STRUCTURE of system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice is
 begin
-\aw.aw_pipe\: entity work.system_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice
+\aw.aw_pipe\: entity work.system_auto_us_1_axi_register_slice_v2_1_27_axic_register_slice
      port map (
       D(60 downto 0) => D(60 downto 0),
       E(0) => E(0),
@@ -6245,7 +6245,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer is
+entity system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer is
   port (
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Q : out STD_LOGIC_VECTOR ( 41 downto 0 );
@@ -6271,10 +6271,10 @@ entity system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer is
     m_axi_awready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer : entity is "axi_dwidth_converter_v2_1_26_axi_upsizer";
-end system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer;
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer : entity is "axi_dwidth_converter_v2_1_27_axi_upsizer";
+end system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer;
 
-architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer is
+architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer is
   signal \^use_register.m_axi_wvalid_q_reg\ : STD_LOGIC;
   signal \USE_RTL_CURR_WORD.current_word_q\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \USE_RTL_CURR_WORD.first_word_q\ : STD_LOGIC;
@@ -6340,7 +6340,7 @@ architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsi
 begin
   \USE_REGISTER.M_AXI_WVALID_q_reg\ <= \^use_register.m_axi_wvalid_q_reg\;
   m_axi_awlen(7 downto 0) <= \^m_axi_awlen\(7 downto 0);
-\USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_26_w_upsizer
+\USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_27_w_upsizer
      port map (
       D(2 downto 0) => pre_next_word(2 downto 0),
       E(0) => pop_si_data,
@@ -6397,7 +6397,7 @@ begin
       wrap_buffer_available => wrap_buffer_available,
       wrap_buffer_available_reg_0 => \USE_WRITE.write_addr_inst_n_37\
     );
-\USE_WRITE.write_addr_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer
+\USE_WRITE.write_addr_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_27_a_upsizer
      port map (
       D(2 downto 0) => pre_next_word(2 downto 0),
       E(0) => sr_awvalid,
@@ -6471,7 +6471,7 @@ begin
       wrap_buffer_available_reg_5(0) => \WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[1].USE_RTL_DATA.wdata_wrap_buffer_q_reg0\,
       wrap_buffer_available_reg_6(0) => \WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[0].USE_RTL_DATA.wdata_wrap_buffer_q_reg0\
     );
-si_register_slice_inst: entity work.system_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice
+si_register_slice_inst: entity work.system_auto_us_1_axi_register_slice_v2_1_27_axi_register_slice
      port map (
       D(60 downto 0) => D(60 downto 0),
       E(0) => sr_awvalid,
@@ -6508,7 +6508,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_auto_us_1_axi_dwidth_converter_v2_1_26_top is
+entity system_auto_us_1_axi_dwidth_converter_v2_1_27_top is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -6590,62 +6590,62 @@ entity system_auto_us_1_axi_dwidth_converter_v2_1_26_top is
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 32;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
-  attribute C_AXI_IS_ACLK_ASYNC of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_AXI_IS_ACLK_ASYNC of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_AXI_PROTOCOL of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_AXI_SUPPORTS_READ of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is "zynq";
+  attribute C_FAMILY of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is "zynq";
   attribute C_FIFO_MODE : integer;
-  attribute C_FIFO_MODE of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_FIFO_MODE of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_MAX_SPLIT_BEATS : integer;
-  attribute C_MAX_SPLIT_BEATS of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 16;
+  attribute C_MAX_SPLIT_BEATS of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 16;
   attribute C_M_AXI_ACLK_RATIO : integer;
-  attribute C_M_AXI_ACLK_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 2;
+  attribute C_M_AXI_ACLK_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 2;
   attribute C_M_AXI_BYTES_LOG : integer;
-  attribute C_M_AXI_BYTES_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 3;
+  attribute C_M_AXI_BYTES_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 3;
   attribute C_M_AXI_DATA_WIDTH : integer;
-  attribute C_M_AXI_DATA_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 64;
+  attribute C_M_AXI_DATA_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 64;
   attribute C_PACKING_LEVEL : integer;
-  attribute C_PACKING_LEVEL of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
+  attribute C_PACKING_LEVEL of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 1;
   attribute C_RATIO : integer;
-  attribute C_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_RATIO_LOG : integer;
-  attribute C_RATIO_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_RATIO_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_SUPPORTS_ID : integer;
-  attribute C_SUPPORTS_ID of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute C_SUPPORTS_ID of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute C_SYNCHRONIZER_STAGE : integer;
-  attribute C_SYNCHRONIZER_STAGE of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 3;
+  attribute C_SYNCHRONIZER_STAGE of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 3;
   attribute C_S_AXI_ACLK_RATIO : integer;
-  attribute C_S_AXI_ACLK_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
+  attribute C_S_AXI_ACLK_RATIO of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 1;
   attribute C_S_AXI_BYTES_LOG : integer;
-  attribute C_S_AXI_BYTES_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 2;
+  attribute C_S_AXI_BYTES_LOG of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 2;
   attribute C_S_AXI_DATA_WIDTH : integer;
-  attribute C_S_AXI_DATA_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 32;
+  attribute C_S_AXI_DATA_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 32;
   attribute C_S_AXI_ID_WIDTH : integer;
-  attribute C_S_AXI_ID_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
+  attribute C_S_AXI_ID_WIDTH of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is "yes";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is "axi_dwidth_converter_v2_1_26_top";
+  attribute ORIG_REF_NAME of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is "axi_dwidth_converter_v2_1_27_top";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
+  attribute P_AXI3 of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 0;
+  attribute P_AXI4 of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 2;
+  attribute P_AXILITE of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 2;
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 2;
+  attribute P_CONVERSION of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 2;
   attribute P_MAX_SPLIT_BEATS : integer;
-  attribute P_MAX_SPLIT_BEATS of system_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 16;
-end system_auto_us_1_axi_dwidth_converter_v2_1_26_top;
+  attribute P_MAX_SPLIT_BEATS of system_auto_us_1_axi_dwidth_converter_v2_1_27_top : entity is 16;
+end system_auto_us_1_axi_dwidth_converter_v2_1_27_top;
 
-architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_26_top is
+architecture STRUCTURE of system_auto_us_1_axi_dwidth_converter_v2_1_27_top is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_bresp\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^m_axi_bvalid\ : STD_LOGIC;
@@ -6768,7 +6768,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_upsizer.gen_full_upsizer.axi_upsizer_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer
+\gen_upsizer.gen_full_upsizer.axi_upsizer_inst\: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_27_axi_upsizer
      port map (
       D(60 downto 57) => s_axi_awregion(3 downto 0),
       D(56 downto 53) => s_axi_awqos(3 downto 0),
@@ -6857,11 +6857,11 @@ entity system_auto_us_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of system_auto_us_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of system_auto_us_1 : entity is "system_auto_us_1,axi_dwidth_converter_v2_1_26_top,{}";
+  attribute CHECK_LICENSE_TYPE of system_auto_us_1 : entity is "system_auto_us_1,axi_dwidth_converter_v2_1_27_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_auto_us_1 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of system_auto_us_1 : entity is "axi_dwidth_converter_v2_1_26_top,Vivado 2022.1";
+  attribute X_CORE_INFO of system_auto_us_1 : entity is "axi_dwidth_converter_v2_1_27_top,Vivado 2022.2";
 end system_auto_us_1;
 
 architecture STRUCTURE of system_auto_us_1 is
@@ -6981,7 +6981,7 @@ architecture STRUCTURE of system_auto_us_1 is
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_26_top
+inst: entity work.system_auto_us_1_axi_dwidth_converter_v2_1_27_top
      port map (
       m_axi_aclk => '0',
       m_axi_araddr(31 downto 0) => NLW_inst_m_axi_araddr_UNCONNECTED(31 downto 0),

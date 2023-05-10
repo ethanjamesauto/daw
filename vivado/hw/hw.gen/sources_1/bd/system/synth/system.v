@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Aug  1 15:59:37 2022
-//Host        : sim-ro running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+//Date        : Wed May 10 15:40:10 2023
+//Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
 //Purpose     : IP block netlist
@@ -2931,7 +2931,7 @@ module system_axi_mem_intercon_0
         .S_AXI_wready(axi_mem_intercon_to_s01_couplers_WREADY),
         .S_AXI_wstrb(axi_mem_intercon_to_s01_couplers_WSTRB),
         .S_AXI_wvalid(axi_mem_intercon_to_s01_couplers_WVALID));
-  system_xbar_0 xbar
+  system_xbar_2 xbar
        (.aclk(axi_mem_intercon_ACLK_net),
         .aresetn(axi_mem_intercon_ARESETN_net),
         .m_axi_araddr(xbar_to_m00_couplers_ARADDR),
@@ -3799,7 +3799,7 @@ module system_ps7_0_axi_periph_0
         .S_AXI_wready(ps7_0_axi_periph_to_s00_couplers_WREADY),
         .S_AXI_wstrb(ps7_0_axi_periph_to_s00_couplers_WSTRB),
         .S_AXI_wvalid(ps7_0_axi_periph_to_s00_couplers_WVALID));
-  system_xbar_1 xbar
+  system_xbar_3 xbar
        (.aclk(ps7_0_axi_periph_ACLK_net),
         .aresetn(ps7_0_axi_periph_ARESETN_net),
         .m_axi_araddr({xbar_to_m03_couplers_ARADDR,xbar_to_m02_couplers_ARADDR,xbar_to_m01_couplers_ARADDR,xbar_to_m00_couplers_ARADDR}),

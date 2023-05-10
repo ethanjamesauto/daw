@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Aug  1 16:02:46 2022
--- Host        : sim-ro running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+-- Date        : Wed May 10 15:48:17 2023
+-- Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_sim_netlist.vhdl
+--               c:/Users/Ethan/Documents/daw/vivado/hw/hw.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_sim_netlist.vhdl
 -- Design      : system_axi_dma_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23460,7 +23460,10 @@ begin
       O => \FSM_sequential_smpl_cs[1]_i_3_n_0\
     );
 \FSM_sequential_smpl_cs_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_lite_aclk,
       CE => '1',
       D => \FSM_sequential_smpl_cs[0]_i_1__0_n_0\,
@@ -23468,7 +23471,10 @@ begin
       R => \GEN_CMD_BTT_LESS_23.cmnd_data_reg[0]_0\
     );
 \FSM_sequential_smpl_cs_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_lite_aclk,
       CE => '1',
       D => \FSM_sequential_smpl_cs[1]_i_2__0_n_0\,
@@ -24151,7 +24157,10 @@ begin
       O => \FSM_sequential_smpl_cs[1]_i_3__0_n_0\
     );
 \FSM_sequential_smpl_cs_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_lite_aclk,
       CE => '1',
       D => \FSM_sequential_smpl_cs[0]_i_1_n_0\,
@@ -24159,7 +24168,10 @@ begin
       R => \GEN_CMD_BTT_LESS_23.cmnd_data_reg[0]_0\
     );
 \FSM_sequential_smpl_cs_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_axi_lite_aclk,
       CE => '1',
       D => \FSM_sequential_smpl_cs[1]_i_2_n_0\,
@@ -33602,7 +33614,7 @@ architecture STRUCTURE of system_axi_dma_0_0_xpm_fifo_reg_bit is
   signal \^rst_d1\ : STD_LOGIC;
 begin
   rst_d1 <= \^rst_d1\;
-d_out_reg: unisim.vcomponents.FDRE
+d_out_int_reg: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -33644,7 +33656,7 @@ architecture STRUCTURE of system_axi_dma_0_0_xpm_fifo_reg_bit_25 is
   signal \^rst_d1\ : STD_LOGIC;
 begin
   rst_d1 <= \^rst_d1\;
-d_out_reg: unisim.vcomponents.FDRE
+d_out_int_reg: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -33686,7 +33698,7 @@ architecture STRUCTURE of system_axi_dma_0_0_xpm_fifo_reg_bit_8 is
   signal \^rst_d1\ : STD_LOGIC;
 begin
   rst_d1 <= \^rst_d1\;
-d_out_reg: unisim.vcomponents.FDRE
+d_out_int_reg: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -34693,30 +34705,22 @@ end \system_axi_dma_0_0_xpm_memory_base__parameterized0\;
 
 architecture STRUCTURE of \system_axi_dma_0_0_xpm_memory_base__parameterized0\ is
   signal \<const0>\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg0\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  signal \gen_rd_b.doutb_reg_reg_n_0_[0]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[1]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[2]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[3]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[4]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[5]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[6]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[7]\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg_reg_n_0_[8]\ : STD_LOGIC;
+  signal \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 to 1 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute dram_emb_xdc : string;
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[0]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[1]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[2]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[3]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[4]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[5]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[6]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[7]\ : label is "no";
-  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[8]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[0]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[2]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[3]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[4]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[5]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[6]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[7]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[8]\ : label is "no";
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is "";
   attribute RTL_RAM_BITS : integer;
@@ -34762,203 +34766,203 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_rd_b.doutb_reg_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(0),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[0]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(1),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[1]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(2),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[2]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(3),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[3]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(4),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[4]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(5),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[5]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(6),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[6]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(7),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[7]\,
-      R => '0'
-    );
-\gen_rd_b.doutb_reg_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clka,
-      CE => enb,
-      D => \gen_rd_b.doutb_reg0\(8),
-      Q => \gen_rd_b.doutb_reg_reg_n_0_[8]\,
-      R => '0'
-    );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[0]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(0),
       Q => doutb(0),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[1]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(1),
       Q => doutb(1),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][2]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[2]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(2),
       Q => doutb(2),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[3]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(3),
       Q => doutb(3),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][4]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][4]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[4]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(4),
       Q => doutb(4),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[5]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(5),
       Q => doutb(5),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[6]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(6),
       Q => doutb(6),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[7]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(7),
       Q => doutb(7),
       R => rstb
     );
-\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][8]\: unisim.vcomponents.FDRE
+\gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][8]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clka,
       CE => regceb,
-      D => \gen_rd_b.doutb_reg_reg_n_0_[8]\,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(8),
       Q => doutb(8),
       R => rstb
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(0),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(0),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(1),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(1),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(2),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(2),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(3),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(3),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(4),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(4),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(5),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(5),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(6),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(6),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(7),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(7),
+      R => '0'
+    );
+\gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => enb,
+      D => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(8),
+      Q => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg\(8),
+      R => '0'
     );
 \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\: unisim.vcomponents.RAM32M
     generic map(
@@ -34980,9 +34984,9 @@ GND: unisim.vcomponents.GND
       DIB(1 downto 0) => dina(3 downto 2),
       DIC(1 downto 0) => dina(5 downto 4),
       DID(1 downto 0) => B"00",
-      DOA(1 downto 0) => \gen_rd_b.doutb_reg0\(1 downto 0),
-      DOB(1 downto 0) => \gen_rd_b.doutb_reg0\(3 downto 2),
-      DOC(1 downto 0) => \gen_rd_b.doutb_reg0\(5 downto 4),
+      DOA(1 downto 0) => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(1 downto 0),
+      DOB(1 downto 0) => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(3 downto 2),
+      DOC(1 downto 0) => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(5 downto 4),
       DOD(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED\(1 downto 0),
       WCLK => clka,
       WE => wea(0)
@@ -35008,9 +35012,9 @@ GND: unisim.vcomponents.GND
       DIB(0) => dina(8),
       DIC(1 downto 0) => B"00",
       DID(1 downto 0) => B"00",
-      DOA(1 downto 0) => \gen_rd_b.doutb_reg0\(7 downto 6),
+      DOA(1 downto 0) => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(7 downto 6),
       DOB(1) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED\(1),
-      DOB(0) => \gen_rd_b.doutb_reg0\(8),
+      DOB(0) => \gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg0\(8),
       DOC(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOC_UNCONNECTED\(1 downto 0),
       DOD(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOD_UNCONNECTED\(1 downto 0),
       WCLK => clka,
@@ -46980,17 +46984,17 @@ entity \system_axi_dma_0_0_sync_fifo_fg__parameterized0\ is
     dout : out STD_LOGIC_VECTOR ( 8 downto 0 );
     empty : out STD_LOGIC;
     sig_child_qual_first_of_2_reg : out STD_LOGIC;
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
     sig_clr_dbeat_cntr0_out : out STD_LOGIC;
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ : out STD_LOGIC;
     \sig_burst_dbeat_cntr_reg[3]\ : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 5 downto 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     O : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sig_stream_rst : in STD_LOGIC;
     m_axi_s2mm_aclk : in STD_LOGIC;
     sig_clr_dbc_reg : in STD_LOGIC;
@@ -47143,7 +47147,7 @@ begin
       I0 => \^dout\(7),
       I1 => \^dout\(8),
       I2 => sig_child_qual_first_of_2,
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\
     );
 \sig_burst_dbeat_cntr[3]_i_3\: unisim.vcomponents.LUT5
     generic map(
@@ -47426,7 +47430,7 @@ begin
       DI(2) => \sig_child_addr_cntr_lsh[4]_i_2_n_0\,
       DI(1) => \sig_child_addr_cntr_lsh[4]_i_3_n_0\,
       DI(0) => \sig_child_addr_cntr_lsh[4]_i_4_n_0\,
-      O(3 downto 0) => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3 downto 0),
+      O(3 downto 0) => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3 downto 0),
       S(3 downto 0) => \sig_child_addr_cntr_lsh_reg[7]\(3 downto 0)
     );
 sig_clr_dbc_reg_i_1: unisim.vcomponents.LUT6
@@ -47472,7 +47476,7 @@ sig_xfer_is_seq_reg_i_1: unisim.vcomponents.LUT3
       I2 => sig_child_addr_cntr_lsh_reg(0),
       I3 => \^dout\(0),
       I4 => \^dout\(2),
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(0)
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(0)
     );
 \sig_xfer_len_reg[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -47485,7 +47489,7 @@ sig_xfer_is_seq_reg_i_1: unisim.vcomponents.LUT3
       I3 => \^dout\(1),
       I4 => sig_child_addr_cntr_lsh_reg(1),
       I5 => \^dout\(3),
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(1)
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(1)
     );
 \sig_xfer_len_reg[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -47495,7 +47499,7 @@ sig_xfer_is_seq_reg_i_1: unisim.vcomponents.LUT3
       I0 => \sig_xfer_len_reg[4]_i_2_n_0\,
       I1 => \sig_xfer_len_reg[4]_i_3_n_0\,
       I2 => \^dout\(4),
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(2)
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(2)
     );
 \sig_xfer_len_reg[3]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -47506,7 +47510,7 @@ sig_xfer_is_seq_reg_i_1: unisim.vcomponents.LUT3
       I1 => \^dout\(4),
       I2 => \sig_xfer_len_reg[4]_i_3_n_0\,
       I3 => \^dout\(5),
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(3)
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(3)
     );
 \sig_xfer_len_reg[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -47518,7 +47522,7 @@ sig_xfer_is_seq_reg_i_1: unisim.vcomponents.LUT3
       I2 => \sig_xfer_len_reg[4]_i_3_n_0\,
       I3 => \^dout\(4),
       I4 => \^dout\(6),
-      O => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(4)
+      O => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(4)
     );
 \sig_xfer_len_reg[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -52122,17 +52126,17 @@ entity \system_axi_dma_0_0_axi_datamover_sfifo_autord__parameterized0\ is
     dout : out STD_LOGIC_VECTOR ( 8 downto 0 );
     empty : out STD_LOGIC;
     sig_child_qual_first_of_2_reg : out STD_LOGIC;
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
     sig_clr_dbeat_cntr0_out : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \sig_burst_dbeat_cntr_reg[3]\ : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 5 downto 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ : out STD_LOGIC;
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     O : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sig_stream_rst : in STD_LOGIC;
     m_axi_s2mm_aclk : in STD_LOGIC;
     sig_clr_dbc_reg : in STD_LOGIC;
@@ -52174,9 +52178,9 @@ begin
       full => full,
       \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ => E(0),
       \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(4 downto 0) => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(4 downto 0),
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3 downto 0) => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3 downto 0),
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(4 downto 0) => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(4 downto 0),
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3 downto 0) => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3 downto 0),
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\,
       m_axi_s2mm_aclk => m_axi_s2mm_aclk,
       rd_en => rd_en,
       \sig_burst_dbeat_cntr_reg[3]\ => \sig_burst_dbeat_cntr_reg[3]\,
@@ -54553,14 +54557,14 @@ entity system_axi_dma_0_0_axi_datamover_indet_btt is
     sig_m_valid_out_reg : out STD_LOGIC;
     sig_ibtt2wdc_tlast : out STD_LOGIC;
     sig_child_qual_first_of_2_reg : out STD_LOGIC;
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ : out STD_LOGIC;
     \sig_burst_dbeat_cntr_reg[3]_0\ : out STD_LOGIC;
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ : out STD_LOGIC;
     sig_m_valid_out_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 4 downto 0 );
     O : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     DI : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \sig_data_reg_out_reg[34]\ : out STD_LOGIC_VECTOR ( 34 downto 0 );
     sig_m_valid_out_reg_1 : out STD_LOGIC;
@@ -54690,9 +54694,9 @@ I_XD_FIFO: entity work.\system_axi_dma_0_0_axi_datamover_sfifo_autord__parameter
       empty => empty,
       full => sig_data_fifo_full,
       \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5]\(4 downto 0) => D(4 downto 0),
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3 downto 0) => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3 downto 0),
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ => \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][5]\(4 downto 0) => D(4 downto 0),
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3 downto 0) => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3 downto 0),
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ => \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\,
       m_axi_s2mm_aclk => m_axi_s2mm_aclk,
       rd_en => rd_en,
       \sig_burst_dbeat_cntr_reg[3]\ => \sig_burst_dbeat_cntr_reg[3]_0\,
@@ -56150,11 +56154,11 @@ begin
       dout(6 downto 0) => sig_sf2pcc_xfer_bytes(6 downto 0),
       empty => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_9\,
       \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(3) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_29\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(2) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_30\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(1) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_31\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]\(0) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_32\,
-      \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]\ => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(3) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_29\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(2) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_30\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(1) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_31\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][6]\(0) => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_32\,
+      \gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][7]\ => \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15\,
       m_axi_s2mm_aclk => m_axi_s2mm_aclk,
       \out\ => \ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/p_0_in2_in\,
       rd_en => sig_pop_xd_fifo,
@@ -57792,7 +57796,7 @@ entity system_axi_dma_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_axi_dma_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_axi_dma_0_0 : entity is "axi_dma,Vivado 2022.1";
+  attribute x_core_info of system_axi_dma_0_0 : entity is "axi_dma,Vivado 2022.2";
 end system_axi_dma_0_0;
 
 architecture STRUCTURE of system_axi_dma_0_0 is
