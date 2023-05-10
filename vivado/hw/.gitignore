@@ -31,7 +31,6 @@
 *.cache
 .metadata
 *.data
-*.ipdefs
 .Xil
 *.sdk
 *.hw
