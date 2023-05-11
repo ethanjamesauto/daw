@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Wed May 10 15:40:10 2023
+//Date        : Wed May 10 18:29:34 2023
 //Host        : DESKTOP-MJRS0I7 running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1610,7 +1610,7 @@ module s01_couplers_imp_VQ497S
         .s_axi_wvalid(s01_couplers_to_auto_us_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -1646,7 +1646,10 @@ module system
     ac_pblrc,
     ac_recdat,
     ac_reclrc,
-    btns_4bits_tri_i);
+    btns_4bits_tri_i,
+    led5_b,
+    led5_g,
+    led5_r);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -1682,6 +1685,9 @@ module system
   input ac_recdat;
   output ac_reclrc;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 btns_4bits TRI_I" *) input [3:0]btns_4bits_tri_i;
+  output led5_b;
+  output led5_g;
+  output led5_r;
 
   wire ac_recdat_1;
   wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
@@ -1906,6 +1912,9 @@ module system
   wire [31:0]ps7_0_axi_periph_M03_AXI_WDATA;
   wire ps7_0_axi_periph_M03_AXI_WREADY;
   wire [0:0]ps7_0_axi_periph_M03_AXI_WVALID;
+  wire rgb_driver_0_b;
+  wire rgb_driver_0_g;
+  wire rgb_driver_0_r;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [3:0]xlconcat_0_dout;
@@ -1925,6 +1934,9 @@ module system
   assign axi_gpio_0_GPIO_TRI_I = btns_4bits_tri_i[3:0];
   assign axi_iic_0_IIC_SCL_I = IIC_scl_i;
   assign axi_iic_0_IIC_SDA_I = IIC_sda_i;
+  assign led5_b = rgb_driver_0_b;
+  assign led5_g = rgb_driver_0_g;
+  assign led5_r = rgb_driver_0_r;
   system_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -2380,6 +2392,11 @@ module system
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
+  system_rgb_driver_0_0 rgb_driver_0
+       (.b(rgb_driver_0_b),
+        .clk(processing_system7_0_FCLK_CLK0),
+        .g(rgb_driver_0_g),
+        .r(rgb_driver_0_r));
   system_rst_ps7_0_100M_0 rst_ps7_0_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

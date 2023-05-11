@@ -3,6 +3,7 @@
 
 # [home]
 *.runs
+*.xsa
 
 *.jou
 *.log

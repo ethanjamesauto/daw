@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFDFD5C86F2C9D062",
+      "boundary_crc": "0x477018ABCAD8F91",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../hw.gen/sources_1/bd/system",
       "name": "system",
@@ -40,7 +40,8 @@
         "m02_couplers": {},
         "m03_couplers": {}
       },
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "rgb_driver_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -278,6 +279,15 @@
         "direction": "I"
       },
       "ac_reclrc": {
+        "direction": "O"
+      },
+      "led5_r": {
+        "direction": "O"
+      },
+      "led5_g": {
+        "direction": "O"
+      },
+      "led5_b": {
         "direction": "O"
       }
     },
@@ -3355,6 +3365,42 @@
         "xci_name": "system_xlconstant_0_0",
         "xci_path": "ip\\system_xlconstant_0_0\\system_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0"
+      },
+      "rgb_driver_0": {
+        "vlnv": "xilinx.com:module_ref:rgb_driver:1.0",
+        "xci_name": "system_rgb_driver_0_0",
+        "xci_path": "ip\\system_rgb_driver_0_0\\system_rgb_driver_0_0.xci",
+        "inst_hier_path": "rgb_driver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rgb_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "r": {
+            "direction": "O"
+          },
+          "g": {
+            "direction": "O"
+          },
+          "b": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3523,13 +3569,32 @@
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/M01_ACLK",
           "ps7_0_axi_periph/M02_ACLK",
-          "ps7_0_axi_periph/M03_ACLK"
+          "ps7_0_axi_periph/M03_ACLK",
+          "rgb_driver_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "rst_ps7_0_100M/ext_reset_in"
+        ]
+      },
+      "rgb_driver_0_b": {
+        "ports": [
+          "rgb_driver_0/b",
+          "led5_b"
+        ]
+      },
+      "rgb_driver_0_g": {
+        "ports": [
+          "rgb_driver_0/g",
+          "led5_g"
+        ]
+      },
+      "rgb_driver_0_r": {
+        "ports": [
+          "rgb_driver_0/r",
+          "led5_r"
         ]
       },
       "rst_ps7_0_100M_interconnect_aresetn": {
